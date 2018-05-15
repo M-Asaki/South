@@ -1,0 +1,22 @@
+<div class="bottom-wrapper">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-left text-title">チーム登録</h1>
+      <div class="col-md-offset-4 col-md-4 bottom-container">
+        <%= form_for @team do |f| %>
+          <div class='form-group'>
+            <%= f.label :チーム写真 %>
+            <%= f.file_field :team_image %>
+          </div>
+
+          <div class='form-group'>
+            <%= f.label :チーム名 %>
+            <%= f.text_field :team_name, class: 'form-control' %>
+          </div>
+
+          <%= f.submit 'チーム登録', class: 'btn btn-block btn-gray' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

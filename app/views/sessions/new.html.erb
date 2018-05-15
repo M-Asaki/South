@@ -1,0 +1,21 @@
+<div class="bottom-wrapper">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-left text-title">Log in</h1>
+      <div class="col-md-offset-4 col-md-4 bottom-container">
+        <%= form_for :session, url: login_path do |f| %>
+          <div class="form-group">
+            <%= f.label :email, class: 'text-gray' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :password, class: 'text-gray' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+
+          <%= f.submit "Log in", class: 'btn-block btn-gray' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
