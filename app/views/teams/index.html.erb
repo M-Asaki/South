@@ -1,16 +1,16 @@
 <div class="bottom-wrapper">
   <div class="container">
-    <% @teams.each do |team| %>
       <div class="row">
         <h1 class="text-left text-title">チーム一覧</h1>
-        <div class="col-md-offset-4 col-md-4 bottom-container">
-          <%= image_tag team.team_image.url %>
-          <h2 class='team-name'>
-            <%= team.team_name %>
-          </h2>
-          <%= link_to "GO", '#', class: 'team-page-entrance' %>
-        </div>
+        <% @teams.each do |team| %>
+          <div class="col-md-offset-4 col-md-4 bottom-container">
+            <%= image_tag team.team_image.url %>
+            <h2 class='team-name'>
+              <%= team.team_name %>
+            </h2>
+            <%= link_to "GO", '#', class: 'team-page-entrance' %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
   </div>
 </div>
