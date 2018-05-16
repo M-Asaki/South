@@ -1,5 +1,18 @@
 <div class="bottom-wrapper">
   <div class="container">
     <div class="row">
-      <h1 class="text-left text-title">メンバー登録</h1>
-      <div class="col-md-offset-4 col-md-4 bottom-container">
+      <button class="text-right team-create-entrance">
+        <%= link_to "チームトップへ", "#" %>
+      </button>
+      <h1 class="text-left team-page-title">メンバー登録</h1>
+      <%= form_for @member do |f| %>
+        <div class="form-member">
+          <%= f.text_field :uniform_number, placeholder:'背番号' ,class: "form-uniform-number" %>
+          <%= f.text_field :member_name, placeholder:'名前' ,class: "form-member-name" %>
+          <%= f.submit "登録", class: 'btn-member btn-gray' %>
+        </div>
+      <% end %>
+      <h2 class="text-left member-index-title">メンバー一覧</h2>
+    </div>
+  </div>
+</div>

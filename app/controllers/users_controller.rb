@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:user][:name], email: params[:user][:email], password: params[:user][:password])
     if @user.save
-      redirect_to root_path, notice: 'ようこそSouthへ！　さぁ、私を甲子園に連れていって！'
+      redirect_to login_path, notice: 'ようこそSouthへ！　さぁ、チームを作って私を甲子園に連れていって！'
     else
       flash.now[:alert] = "参加できませんでした。もう一度登録しよう！"
       render :new

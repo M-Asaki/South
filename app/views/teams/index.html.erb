@@ -1,14 +1,19 @@
 <div class="bottom-wrapper">
   <div class="container">
       <div class="row">
-        <h1 class="text-left text-title">チーム一覧</h1>
+        <button class="text-right team-create-entrance">
+          <%= link_to "チーム登録", teams_new_path %>
+        </button>
+        <h1 class="text-left team-page-title">チーム一覧</h1>
         <% @teams.each do |team| %>
-          <div class="col-md-offset-4 col-md-4 bottom-container">
+          <div class="col-md-offset-4 col-md-4 team-index-container">
             <%= image_tag team.team_image.url %>
             <h2 class='team-name'>
               <%= team.team_name %>
             </h2>
-            <%= link_to "GO", '#', class: 'team-page-entrance' %>
+            <button class='team-page-entrance'>
+              <%= link_to "GO", '#' %>
+            </button>
           </div>
         <% end %>
       </div>

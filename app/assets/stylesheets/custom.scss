@@ -3,11 +3,22 @@
   font-family: 'Bree Serif';
 }
 
+.text-login {
+  margin-left: 20%;
+}
+
+.btn-submit {
+  width: 60%;
+  height: 50px;
+  text-align: center;
+  margin: 30px auto 30px auto;
+  font-size: 14px;
+  border-radius: 25px;
+}
+
 .btn-gray {
   color: #fff;
   background-color: #8DA4C0;
-  padding-top: 15px;
-  padding-bottom: 15px;
   margin-bottom: 60px;
   font-size: 20px;
   font-family: 'Domine';
@@ -37,7 +48,7 @@
   h2 {
     font-size: 50px;
     margin-top: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 }
 
@@ -67,7 +78,16 @@ form-control {
     padding-top: 160px;
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn-submit {
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    margin: 60px auto 30px auto;
+    font-size: 14px;
+    border-radius: 25px;
     }
   }
 }
@@ -77,4 +97,115 @@ form-control {
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+
+.team-index-container {
+  margin-top: 50px;
+  margin-right: 0px;
+
+
+  img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    float: left;
+    margin-left: 0px;
+  }
+
+  .team-name {
+    font-size: 30px;
+    color: #8DA4C0;
+    width: 400px;
+    height: 150px;
+    line-height: 150px;
+    display: block;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .team-page-entrance {
+    font-size: 30px;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    background-color: #8DA4C0;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Bree Serif';
+  }
+
+}
+
+.team-create-entrance {
+  width: 150px;
+  height: 50px;
+  margin: 60px 20px 0px 600px;
+  background-color: #8DA4C0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.team-page-title {
+  border-bottom: 1px solid #8DA4C0;
+  color: #8DA4C0;
+  font-family: 'Domine';
+  font-size: 50px;
+  padding-top: 40px;
+}
+
+.form-uniform-number {
+    display: inline;
+    width: 10%;
+    height: 50px;
+    margin-right: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-member-name {
+    display: inline;
+    width: 65%;
+    height: 50px;
+    margin-right: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-member {
+  margin: 90px 10px 30px 10px;
+}
+
+.btn-member {
+  display: inline;
+  width: 15%;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.member-index-title {
+  border-bottom: 1px solid #8DA4C0;
+  color: #8DA4C0;
+  font-family: 'Domine';
+  font-size: 40px;
 }
