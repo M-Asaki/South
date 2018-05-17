@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   def new
     @member = Member.new
-    @member = Member.where(team_id: params[:team_id])
+    @members = Member.where(team_id: params[:team_id])
   end
 
   def create

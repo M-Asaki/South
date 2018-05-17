@@ -15,9 +15,11 @@
       <h2 class="text-left member-index-title">メンバー一覧</h2>
       <p class="member-index-p">背番号</p>
       <p class="member-index-p">名前</p>
-      <%= @member.each do |member| %>
+      <%= @members.each do |member| %>
         <p class="member-index-p">
           <%= member.uniform_number %>
+        </p>
+        <p class="member-index-p">
           <%= member.member_name %>
         </p>
       <% end %>
