@@ -5,14 +5,22 @@
         <%= link_to "チームトップへ", "#" %>
       </button>
       <h1 class="text-left team-page-title">メンバー登録</h1>
-      <%= form_for @member do |f| %>
+      <%= form_for @member,url: {action: 'create'} do |f| %>
         <div class="form-member">
           <%= f.text_field :uniform_number, placeholder:'背番号' ,class: "form-uniform-number" %>
           <%= f.text_field :member_name, placeholder:'名前' ,class: "form-member-name" %>
-          <%= f.submit "登録", class: 'btn-member btn-gray' %>
+          <%= f.submit "登 録", class: 'btn-member btn-gray' %>
         </div>
       <% end %>
       <h2 class="text-left member-index-title">メンバー一覧</h2>
+      <p class="member-index-p">背番号</p>
+      <p class="member-index-p">名前</p>
+      <%= @member.each do |member| %>
+        <p class="member-index-p">
+          <%= member.uniform_number %>
+          <%= member.member_name %>
+        </p>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,0 +1,29 @@
+<div class="bottom-wrapper">
+  <div class="container">
+      <div class="row">
+        <button class="text-right team-create-entrance">
+          <%= link_to "チーム登録", teams_new_path %>
+        </button>
+        <% @team.each do |team| %>
+          <h1 class="text-left team-page-title">
+            <%= team.team_name %>
+          </h1>
+          <div class="myteam-container">
+            <%= image_tag team.team_image.url %>
+            <button class='text-right myteam-button button-margin'>
+              <%= link_to "メンバー登録", new_team_member_path(team.id) %>
+            </button>
+            <button class='text-right myteam-button'>
+              <%= link_to "試合結果登録", '#' %>
+            </button>
+            <h2 class="text-left member-index-title">試合結果</h2>
+            <%= link_to "more...", "#", class: 'text-right text-gray' %>
+            <h2 class="text-left member-index-title">記録室</h2>
+            <%= link_to "more...", "#", class: 'text-right text-gray' %>
+            <h2 class="text-left member-index-title">スコア</h2>
+            <%= link_to "more...", "#", class: 'text-right text-gray' %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>

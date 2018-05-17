@@ -1,6 +1,7 @@
 .text-gray {
   color: #8DA4C0;
   font-family: 'Bree Serif';
+  display: block;
 }
 
 .text-login {
@@ -131,7 +132,7 @@ form-control {
     width: 100px;
     height: 100px;
     margin: 25px;
-    background-color: #8DA4C0;
+    background-color: #becbdb;
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
@@ -144,7 +145,7 @@ form-control {
   width: 150px;
   height: 50px;
   margin: 60px 20px 0px 600px;
-  background-color: #8DA4C0;
+  background-color: #becbdb;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
@@ -199,7 +200,7 @@ form-control {
   width: 15%;
   height: 50px;
   text-align: center;
-  font-size: 14px;
+  font-size: 22px;
   border-radius: 4px;
 }
 
@@ -208,4 +209,36 @@ form-control {
   color: #8DA4C0;
   font-family: 'Domine';
   font-size: 40px;
+}
+
+.myteam-container {
+  margin-top: 0px;
+  margin-right: 0px;
+
+
+  img {
+    width: 750px;
+    height: 420px;
+    display: block;
+    float: left;
+    margin: 0px auto 0px auto;
+    border: 10px groove #becbdb;
+  }
+
+  .myteam-button {
+    width: 150px;
+    height: 50px;
+    background-color: #ffdb99;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Domine';
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .button-margin {
+    margin-left: 435px;
+    margin-right: 10px;
+  }
 }

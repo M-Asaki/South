@@ -17,6 +17,10 @@ class TeamsController < ApplicationController
     @teams = current_user.teams.all
   end
 
+  def show
+    @team = Team.where(id: params[:id])
+  end
+
   private
   def team_params
     params.require(:team).permit(:team_image,:team_name)
