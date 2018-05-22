@@ -3,5 +3,5 @@ class Member < ApplicationRecord
   validates :member_name, presence: true
   validates :uniform_number, presence: true
 
-  belongs_to :team
+  belongs_to :team, optional: true
 end

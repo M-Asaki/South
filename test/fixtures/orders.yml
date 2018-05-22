@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 1
+  first_batter: 1
+  first_batter_position: MyString
+  second_batter: 1
+  second_batter_position: MyString
+  third_batter: 1
+  third_batter_position: MyString
+  fourth_batter: 1
+  fourth_batter_position: MyString
+  fifth_batter: 1
+  fifth_batter_position: MyString
+  sixth_batter: 1
+  sixth_batter_position: MyString
+  seventh_batter: 1
+  seventh_batter_position: MyString
+  eighth_batter: 1
+  eighth_batter_position: MyString
+  ninth_batter: 1
+  ninth_batter_position: MyString
+
+two:
+  game_id: 1
+  first_batter: 1
+  first_batter_position: MyString
+  second_batter: 1
+  second_batter_position: MyString
+  third_batter: 1
+  third_batter_position: MyString
+  fourth_batter: 1
+  fourth_batter_position: MyString
+  fifth_batter: 1
+  fifth_batter_position: MyString
+  sixth_batter: 1
+  sixth_batter_position: MyString
+  seventh_batter: 1
+  seventh_batter_position: MyString
+  eighth_batter: 1
+  eighth_batter_position: MyString
+  ninth_batter: 1
+  ninth_batter_position: MyString

@@ -4,6 +4,7 @@ class Team < ApplicationRecord
 
   belongs_to :user
   has_many :members
+  has_many :teams
 
   mount_uploader :team_image, ImageUploader
 end

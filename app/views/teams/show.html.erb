@@ -14,7 +14,7 @@
               <%= link_to "メンバー登録", new_team_member_path(team.id) %>
             </button>
             <button class='text-right myteam-button'>
-              <%= link_to "試合結果登録", '#' %>
+              <%= link_to "試合結果登録", new_team_game_path(team.id) %>
             </button>
             <h2 class="text-left member-index-title">試合結果</h2>
             <%= link_to "more...", "#", class: 'text-right text-gray' %>

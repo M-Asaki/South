@@ -6,8 +6,8 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(member_params)
-    if @member.save
-      redirect_to new_team_member_path(team.id)
+    if @member.save!
+      redirect_to new_team_member_path(params[:team_id])
     else
       flash.now[:alert] = '入力に誤りがあるよ！もう一度トライしよう！'
       render :new
