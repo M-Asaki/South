@@ -1,0 +1,23 @@
+<div class="bottom-wrapper">
+  <div class="container">
+    <div class="row">
+      <button class="text-right team-create-entrance">
+        <%= link_to "チームトップへ", team_path(params[:team_id]) %>
+      </button>
+      <h1 class="text-left team-page-title game-margin">試合結果一覧</h1>
+      <% @game.each do |g| %>
+        <div class="col-md-offset-4 col-md-4 team-index-container">
+          <h2 class='team-name'>
+            <%= g.game_date %>
+            <%= g.opponent %>
+          </h2>
+          <%= image_tag g.top_score_image.url %>
+          <%= image_tag g.bottom_score_image.url %>
+          <button class='team-page-entrance'>
+            <%= link_to "GO", team_game_path(params[:team_id],g.id) %>
+          </button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

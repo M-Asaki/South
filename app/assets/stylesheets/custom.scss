@@ -310,7 +310,7 @@ form-control {
 }
 
 .game-order {
-  margin: 10px 10px 10px 0px;
+  margin: 5px 10px 10px 0px;
 }
 
 .player-position {
@@ -339,9 +339,90 @@ form-control {
   line-height: 50px;
   margin-left: 50px;
   font-size: 18px;
-  color: #8DA4C0;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.game-date {
+  display: inline-block;
+  width: 13%;
+  height: 50px;
+  margin-left: 50px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.index-record-number {
+    display: inline-block;
+    width: 12%;
+    height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 12px;
+    color: #555555;
+    background-color: #becbdb;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.index-batter-score-number {
+    display: inline-block;
+    width: 5%;
+    height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 12px;
+    color: #555555;
+    background-color: #becbdb;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.record-player-name {
+    display: inline-block;
+    width: 12%;
+    height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.record-hitting-number {
+    display: inline-block;
+    width: 5%;
+    height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.hitting-record {
+    display: inline-block;
+    width: 6%;
+    height: 35px;
+    margin-right: -4px;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 12px;
+}
+
+.space {
+  display: inline-block;
+  height: 35px;
+  width: 10px;
 }

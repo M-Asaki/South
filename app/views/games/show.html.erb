@@ -1,0 +1,95 @@
+<div class="bottom-wrapper">
+  <div class="container">
+    <div class="row">
+      <button class="text-right team-create-entrance">
+        <%= link_to "チームトップへ", team_path(params[:team_id]) %>
+      </button>
+      <h1 class="text-left team-page-title game-margin">試合結果</h1>
+      <h2 class="text-left member-index-title game-margin">Score</h2>
+      <table border='1'>
+        <tr>
+          <th>チーム名</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+        </th>
+        <tr>
+          <td>先行チーム</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>後攻のチーム</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <h2 class="text-left member-index-title game-margin">個人成績</h2>
+      <h3 class="text-left member-index-title game-margin">打撃成績</h3>
+      <% @order.each do |o| %>
+        <p class="player-uniform-number">1</p>
+        <p class="player-name">
+          <%= o.first_batter %>
+        </p><br>
+        <p class="player-uniform-number">2</p>
+        <p class="player-name">
+          <%= o.second_batter %>
+        </p><br>
+        <p class="player-uniform-number">3</p>
+        <p class="player-name">
+          <%= o.third_batter %>
+        </p><br>
+        <p class="player-uniform-number">4</p>
+        <p class="player-name">
+          <%= o.fourth_batter %>
+        </p><br>
+        <p class="player-uniform-number">5</p>
+        <p class="player-name">
+          <%= o.fifth_batter %>
+        </p><br>
+        <p class="player-uniform-number">6</p>
+        <p class="player-name">
+          <%= o.sixth_batter %>
+        </p><br>
+        <p class="player-uniform-number">7</p>
+        <p class="player-name">
+          <%= o.seventh_batter %>
+        </p><br>
+        <p class="player-uniform-number">8</p>
+        <p class="player-name">
+          <%= o.eighth_batter %>
+        </p><br>
+        <p class="player-uniform-number">9</p>
+        <p class="player-name">
+          <%= o.ninth_batter %>
+        </p><br>
+      <% end %>
+      <h3 class="text-left member-index-title game-margin">投手成績</h3>
+      <p class="index-uniform-number">回数</p>
+      <p class="index-uniform-number">球数</p>
+      <p class="index-uniform-number">三振</p>
+      <p class="index-uniform-number">安打</p>
+      <p class="index-uniform-number">四球</p>      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,439 @@
+<div class="bottom-wrapper">
+  <div class="container">
+    <div class="row">
+      <button class="text-right team-create-entrance">
+        <%= link_to "チームトップへ", team_path(params[:team_id]) %>
+      </button>
+      <h1 class="text-left team-page-title game-margin">試合結果登録</h1>
+        <%= form_for Inning.new ,url: {action: 'new_record'}  do |f| %>
+          <h2 class="text-left member-index-title game-margin">得点ボード</h2>
+            <table border='1'>
+              <tr>
+                <th>チーム名</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+              </tr>
+                <tr>
+                  <td>先行チーム</td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp11() {
+                        document.getElementById( "Output11" ).innerHTML = ++$Count;
+                      }
+                      function CountDown11() {
+                        document.getElementById( "Output11" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp11();">
+                     <input type="button" value="-" onclick="CountDown11();">
+                    </p>
+                    <p>
+                    	<span id="Output11">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp21() {
+                        document.getElementById( "Output21" ).innerHTML = ++$Count;
+                      }
+                      function CountDown21() {
+                        document.getElementById( "Output21" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp21();">
+                     <input type="button" value="-" onclick="CountDown21();">
+                    </p>
+                    <p>
+                    	<span id="Output21">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp31() {
+                        document.getElementById( "Output31" ).innerHTML = ++$Count;
+                      }
+                      function CountDown31() {
+                        document.getElementById( "Output31" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp31();">
+                     <input type="button" value="-" onclick="CountDown31();">
+                    </p>
+                    <p>
+                    	<span id="Output31">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp41() {
+                        document.getElementById( "Output41" ).innerHTML = ++$Count;
+                      }
+                      function CountDown41() {
+                        document.getElementById( "Output41" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp41();">
+                     <input type="button" value="-" onclick="CountDown41();">
+                    </p>
+                    <p>
+                    	<span id="Output41">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp51() {
+                        document.getElementById( "Output51" ).innerHTML = ++$Count;
+                      }
+                      function CountDown51() {
+                        document.getElementById( "Output51" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp51();">
+                     <input type="button" value="-" onclick="CountDown51();">
+                    </p>
+                    <p>
+                    	<span id="Output51">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp61() {
+                        document.getElementById( "Output61" ).innerHTML = ++$Count;
+                      }
+                      function CountDown61() {
+                        document.getElementById( "Output61" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp61();">
+                     <input type="button" value="-" onclick="CountDown61();">
+                    </p>
+                    <p>
+                    	<span id="Output61">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp71() {
+                        document.getElementById( "Output71" ).innerHTML = ++$Count;
+                      }
+                      function CountDown71() {
+                        document.getElementById( "Output71" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp71();">
+                     <input type="button" value="-" onclick="CountDown71();">
+                    </p>
+                    <p>
+                    	<span id="Output71">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp81() {
+                        document.getElementById( "Output81" ).innerHTML = ++$Count;
+                      }
+                      function CountDown81() {
+                        document.getElementById( "Output81" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp81();">
+                     <input type="button" value="-" onclick="CountDown81();">
+                    </p>
+                    <p>
+                    	<span id="Output81">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp91() {
+                        document.getElementById( "Output91" ).innerHTML = ++$Count;
+                      }
+                      function CountDown91() {
+                        document.getElementById( "Output91" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp91();">
+                     <input type="button" value="-" onclick="CountDown91();">
+                    </p>
+                    <p>
+                    	<span id="Output91">0</span>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>後攻のチーム</td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp12() {
+                        document.getElementById( "Output12" ).innerHTML = ++$Count;
+                      }
+                      function CountDown12() {
+                        document.getElementById( "Output12" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp12();">
+                     <input type="button" value="-" onclick="CountDown12();">
+                    </p>
+                    <p>
+                    	<span id="Output12">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp22() {
+                        document.getElementById( "Output22" ).innerHTML = ++$Count;
+                      }
+                      function CountDown22() {
+                        document.getElementById( "Output22" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp22();">
+                     <input type="button" value="-" onclick="CountDown22();">
+                    </p>
+                    <p>
+                    	<span id="Output22">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp32() {
+                        document.getElementById( "Output32" ).innerHTML = ++$Count;
+                      }
+                      function CountDown32() {
+                        document.getElementById( "Output32" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp32();">
+                     <input type="button" value="-" onclick="CountDown32();">
+                    </p>
+                    <p>
+                    	<span id="Output32">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp42() {
+                        document.getElementById( "Output42" ).innerHTML = ++$Count;
+                      }
+                      function CountDown42() {
+                        document.getElementById( "Output42" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp42();">
+                     <input type="button" value="-" onclick="CountDown42();">
+                    </p>
+                    <p>
+                    	<span id="Output42">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp52() {
+                        document.getElementById( "Output52" ).innerHTML = ++$Count;
+                      }
+                      function CountDown52() {
+                        document.getElementById( "Output52" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp52();">
+                     <input type="button" value="-" onclick="CountDown52();">
+                    </p>
+                    <p>
+                    	<span id="Output52">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp62() {
+                        document.getElementById( "Output62" ).innerHTML = ++$Count;
+                      }
+                      function CountDown62() {
+                        document.getElementById( "Output62" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp62();">
+                     <input type="button" value="-" onclick="CountDown62();">
+                    </p>
+                    <p>
+                    	<span id="Output62">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp72() {
+                        document.getElementById( "Output72" ).innerHTML = ++$Count;
+                      }
+                      function CountDown72() {
+                        document.getElementById( "Output72" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp72();">
+                     <input type="button" value="-" onclick="CountDown72();">
+                    </p>
+                    <p>
+                    	<span id="Output72">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp82() {
+                        document.getElementById( "Output82" ).innerHTML = ++$Count;
+                      }
+                      function CountDown82() {
+                        document.getElementById( "Output82" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp82();">
+                     <input type="button" value="-" onclick="CountDown82();">
+                    </p>
+                    <p>
+                    	<span id="Output82">0</span>
+                    </p>
+                  </td>
+                  <td>
+                    <script type="text/javascript">
+                      var $Count = 0;
+                      function CountUp92() {
+                        document.getElementById( "Output92" ).innerHTML = ++$Count;
+                      }
+                      function CountDown92() {
+                        document.getElementById( "Output92" ).innerHTML = --$Count;
+                      }
+                    </script>
+                    <p>
+      	             <input type="button" value="+" onclick="CountUp92();">
+                     <input type="button" value="-" onclick="CountDown92();">
+                    </p>
+                    <p>
+                    	<span id="Output92">0</span>
+                    </p>
+                  </td>
+                </tr>
+            </table>
+          <h2 class="text-left member-index-title game-margin">Order</h2>
+          <p class="text-center index-batter-score-number">打順</p>
+          <p class="text-center index-record-number">名前</p>
+          <p class="text-center index-record-number">第一打席</p>
+          <p class="text-center index-record-number">第二打席</p>
+          <p class="text-center index-record-number">第三打席</p>
+          <p class="text-center index-record-number">第四打席</p>
+          <p class="text-center index-batter-score-number">打点</p>
+          <p class="text-center index-batter-score-number">盗塁</p>
+          <p class="text-center index-batter-score-number">得点</p><br>
+            <% @order.each do |o| %>
+              <p class="record-hitting-number">1</p>
+              <p class="record-player-name">
+                <%= o.first_batter %>
+              </p>
+              <% @records.each do |record| %>
+                <%= fields_for record,url: {action: 'new_record_create'}  do |r| %>
+                  <%= r.select :hitting_direction, [["方向",""],["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "hitting-record"} %>
+                  <%= r.select :hitting_direction, [["結果","ゴロ"],["ゴロ","ゴロ"],["フライ","フライ"],["ライナー","ライナー"],["安打","安打"],["二塁打","二塁打"],["三塁打","三塁打"],["本塁打","本塁打"],["三振","三振"],["四球","四球"],["死球","死球"]] ,{}, {class: "hitting-record"} %>
+                <% end %>
+              <% end %>
+              <%= fields_for @record,url: {action: 'new_record_create'}  do |r| %>
+                <%= r.select :hitting_direction, [["方向",""],["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "hitting-record"} %>
+                <%= r.select :hitting_direction, [["結果","ゴロ"],["ゴロ","ゴロ"],["フライ","フライ"],["ライナー","ライナー"],["安打","安打"],["二塁打","二塁打"],["三塁打","三塁打"],["本塁打","本塁打"],["三振","三振"],["四球","四球"],["死球","死球"]] ,{}, {class: "hitting-record"} %>
+              <% end %>
+              <p class="space"></p>
+              <%= fields_for @record,url: {action: 'new_record_create'}  do |r| %>
+                <%= r.select :hitting_direction, [["方向",""],["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "hitting-record"} %>
+                <%= r.select :hitting_direction, [["結果","ゴロ"],["ゴロ","ゴロ"],["フライ","フライ"],["ライナー","ライナー"],["安打","安打"],["二塁打","二塁打"],["三塁打","三塁打"],["本塁打","本塁打"],["三振","三振"],["四球","四球"],["死球","死球"]] ,{}, {class: "hitting-record"} %>
+              <% end %>
+              <p class="space"></p>
+              <%= fields_for @record,url: {action: 'new_record_create'}  do |r| %>
+                <%= r.select :hitting_direction, [["方向",""],["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "hitting-record"} %>
+                <%= r.select :hitting_direction, [["結果","ゴロ"],["ゴロ","ゴロ"],["フライ","フライ"],["ライナー","ライナー"],["安打","安打"],["二塁打","二塁打"],["三塁打","三塁打"],["本塁打","本塁打"],["三振","三振"],["四球","四球"],["死球","死球"]] ,{}, {class: "hitting-record"} %>
+              <% end %>
+              <p class="space"></p>
+              <%= fields_for @record,url: {action: 'new_record_create'}  do |r| %>
+                <%= r.select :hitting_direction, [["方向",""],["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "hitting-record"} %>
+                <%= r.select :hitting_direction, [["結果","ゴロ"],["ゴロ","ゴロ"],["フライ","フライ"],["ライナー","ライナー"],["安打","安打"],["二塁打","二塁打"],["三塁打","三塁打"],["本塁打","本塁打"],["三振","三振"],["四球","四球"],["死球","死球"]] ,{}, {class: "hitting-record"} %>
+              <% end %>
+              <p class="space"></p>
+              <%= fields_for @batter_score,url: {action: 'new_record_create'}  do |r| %>
+                <%= r.select :hit_point, [["打点",""],["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"]] ,{}, {class: "hitting-record"} %>
+                <p class="space"></p>
+                <%= r.select :steal, [["盗塁",""],["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"]] ,{}, {class: "hitting-record"} %>
+                <p class="space"></p>
+                <%= r.select :score, [["盗塁",""],["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"]] ,{}, {class: "hitting-record"} %>
+              <% end %><br>
+              <p class="record-hitting-number">2</p>
+              <p class="record-player-name">
+                <%= o.second_batter %>
+              </p><br>
+              <p class="record-hitting-number">3</p>
+              <p class="record-player-name">
+                <%= o.third_batter %>
+              </p><br>
+              <p class="record-hitting-number">4</p>
+              <p class="record-player-name">
+                <%= o.fourth_batter %>
+              </p><br>
+              <p class="record-hitting-number">5</p>
+              <p class="record-player-name">
+                <%= o.fifth_batter %>
+              </p><br>
+              <p class="record-hitting-number">6</p>
+              <p class="record-player-name">
+                <%= o.sixth_batter %>
+              </p><br>
+              <p class="record-hitting-number">7</p>
+              <p class="record-player-name">
+                <%= o.seventh_batter %>
+              </p><br>
+              <p class="record-hitting-number">8</p>
+              <p class="record-player-name">
+                <%= o.eighth_batter %>
+              </p><br>
+              <p class="record-hitting-number">9</p>
+              <p class="record-player-name">
+                <%= o.ninth_batter %>
+              </p><br>
+            <% end %>
+          <%= f.submit "試合結果へ進む", class: 'center-block btn-submit btn-gray' %>
+        <% end %>
+    </div>
+  </div>
+</div>

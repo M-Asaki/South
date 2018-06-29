@@ -17,10 +17,15 @@ Rails.application.routes.draw do
   end
 
   resources :teams do
+  get    '/score_index', to: 'games#score_index'
     resources :games do
+      get :new_record
+      post :new_record, to: 'games#new_record_create'
       resources 'orders'
     end
   end
+
+  get 'sumple/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

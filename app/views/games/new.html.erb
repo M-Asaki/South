@@ -4,65 +4,70 @@
       <button class="text-right team-create-entrance">
         <%= link_to "チームトップへ", team_path(params[:team_id]) %>
       </button>
-      <h1 class="text-left team-page-title game-margin">試合結果登録</h1>
-      <h2 class="text-left member-index-title game-margin">Order</h2>
-      <p class="text-center index-uniform-number">打順</p>
-      <p class="text-center index-uniform-number">守備位置</p>
-      <p class="index-member-name">名前</p><br>
-      <%= form_for @order,url: {action: 'new'}  do |f| %>
-        <div class="game-order">
-          <p class="index-batting-number">１</p>
-          <%= f.text_field :first_batter_position, class: "player-position" %>
-          <%= f.text_field :first_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">２</p>
-          <%= f.text_field :second_batter_position, class: "player-position" %>
-          <%= f.text_field :second_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">３</p>
-          <%= f.text_field :third_batter_position, class: "player-position" %>
-          <%= f.text_field :third_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">４</p>
-          <%= f.text_field :fourth_batter_position, class: "player-position" %>
-          <%= f.text_field :fourth_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">５</p>
-          <%= f.text_field :fifth_batter_position, class: "player-position" %>
-          <%= f.text_field :fifth_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">６</p>
-          <%= f.text_field :sixth_batter_position, class: "player-position" %>
-          <%= f.text_field :sixth_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">７</p>
-          <%= f.text_field :seventh_batter_position, class: "player-position" %>
-          <%= f.text_field :seventh_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">８</p>
-          <%= f.text_field :eighth_batter_position, class: "player-position" %>
-          <%= f.text_field :eighth_batter, class: "form-member-name" %>
-        </div><br>
-        <div class="game-order">
-          <p class="index-batting-number">９</p>
-          <%= f.text_field :ninth_batter_position, class: "player-position" %>
-          <%= f.text_field :ninth_batter, class: "form-member-name" %>
-        </div><br>
-      <% end %>
-      <h2 class="text-left member-index-title game-margin">Score (先攻)</h2>
-      <h2 class="text-left member-index-title game-margin">Score (後攻)</h2>
-      <h2 class="text-left member-index-title game-margin">日時</h2>
-      <h2 class="text-left member-index-title game-margin">対戦相手</h2>
-      <%= form_for @game,url: {action: 'new'}  do |f| %>
-        <%= f.text_field :opponent, placeholder:' 対戦相手' ,class: "opponent-name" %>
-        <%= f.submit "試合登録", class: 'center-block btn-submit btn-gray' %>
+      <h1 class="text-left team-page-title game-margin">試合情報登録</h1>
+      <%= form_for @game,url: {action: 'create'}  do |f| %>
+        <h2 class="text-left member-index-title game-margin">Score (先攻)</h2>
+          <%= f.file_field :top_score_image %>
+        <h2 class="text-left member-index-title game-margin">Score (後攻)</h2>
+          <%= f.file_field :bottom_score_image %>
+        <h2 class="text-left member-index-title game-margin">日時</h2>
+          <%= f.date_select :game_date, {}, class: 'game-date' %>
+        <h2 class="text-left member-index-title game-margin">対戦相手</h2>
+          <%= f.text_field :opponent, placeholder:' 対戦相手' ,class: "opponent-name" %>
+          <%= f.hidden_field :team_id,value: params[:team_id] %>
+        <h2 class="text-left member-index-title game-margin">Order</h2>
+        <p class="text-center index-uniform-number">打順</p>
+        <p class="text-center index-uniform-number">守備位置</p>
+        <p class="index-member-name">名前</p><br>
+        <%= fields_for @order,url: {action: 'create'}  do |fin| %>
+          <div class="game-order">
+            <p class="index-batting-number">１</p>
+            <%= fin.select :first_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :first_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">２</p>
+            <%= fin.select :second_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :second_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">３</p>
+            <%= fin.select :third_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :third_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">４</p>
+            <%= fin.select :fourth_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :fourth_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">５</p>
+            <%= fin.select :fifth_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :fifth_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">６</p>
+            <%= fin.select :sixth_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :sixth_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">７</p>
+            <%= fin.select :seventh_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :seventh_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">８</p>
+            <%= fin.select :eighth_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :eighth_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+          </div><br>
+          <div class="game-order">
+            <p class="index-batting-number">９</p>
+            <%= fin.select :ninth_batter_position, [["投手","投手"],["捕手","捕手"],["一塁手","一塁手"],["二塁手","二塁手"],["三塁手","三塁手"],["遊撃手","遊撃手"],["左翼手","左翼手"],["中堅手","中堅手"],["右翼手","右翼手"]] ,{}, {class: "player-position"} %>
+            <%= fin.collection_select :ninth_batter, Member.where(team_id: params[:team_id]), :id,:member_name, {},{class: "form-member-name"} %>
+            <%= fin.hidden_field :game_id,value: params[:game_id] %>
+          </div><br>
+        <% end %>
+        <%= f.submit "試合結果登録へ進む", class: 'center-block btn-submit btn-gray' %>
       <% end %>
     </div>
   </div>

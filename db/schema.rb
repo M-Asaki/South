@@ -10,12 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_011757) do
+ActiveRecord::Schema.define(version: 2018_06_21_020905) do
+
+  create_table "batter_scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "member_id"
+    t.integer "game_id"
+    t.integer "hit_point"
+    t.integer "steal"
+    t.integer "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "team_id"
     t.datetime "game_date"
     t.string "opponent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "top_score_image"
+    t.string "bottom_score_image"
+  end
+
+  create_table "innings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "inning_number"
+    t.integer "top_score"
+    t.integer "bottom_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,6 +69,21 @@ ActiveRecord::Schema.define(version: 2018_05_22_011757) do
     t.string "eighth_batter_position"
     t.integer "ninth_batter"
     t.string "ninth_batter_position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "batter_score_id"
+    t.string "hitting_direction"
+    t.string "result"
+    t.integer "batting_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sumples", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

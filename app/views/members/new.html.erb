@@ -7,7 +7,7 @@
       <h1 class="text-left team-page-title">メンバー登録</h1>
       <%= form_for @member,url: {action: 'create'} do |f| %>
         <div class="form-member">
-          <%= f.text_field :uniform_number, placeholder:'背番号' ,class: "form-uniform-number" %>
+          <%= f.select :uniform_number, [["背番号",""],["1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7","7"],["8","8"],["9","9"],["10","10"],["11","11"],["12","12"],["13","13"],["14","14"],["15","15"],["16","16"],["17","17"],["18","18"],["19","19"],["20","20"],["21","21"],["22","22"],["23","23"],["24","24"],["25","25"],["26","26"],["27","27"],["28","28"],["29","29"],["30","30"]], {placeholder:'背番号'} , {class: "form-uniform-number"} %>
           <%= f.text_field :member_name, placeholder:'名前' ,class: "form-member-name" %>
           <%= f.hidden_field :team_id,value: params[:team_id] %>
           <%= f.submit "登 録", class: 'btn-member btn-gray' %>

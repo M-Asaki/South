@@ -17,11 +17,11 @@
               <%= link_to "試合結果登録", new_team_game_path(team.id) %>
             </button>
             <h2 class="text-left member-index-title">試合結果</h2>
-            <%= link_to "more...", "#", class: 'text-right text-gray' %>
+            <%= link_to "more...", team_games_path(team.id), class: 'text-right text-gray' %>
             <h2 class="text-left member-index-title">記録室</h2>
             <%= link_to "more...", "#", class: 'text-right text-gray' %>
             <h2 class="text-left member-index-title">スコア</h2>
-            <%= link_to "more...", "#", class: 'text-right text-gray' %>
+            <%= link_to "more...", team_score_index_path(team.id), class: 'text-right text-gray' %>
           </div>
         <% end %>
       </div>

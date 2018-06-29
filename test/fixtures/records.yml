@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  batter_score_id: 1
+  hitting_direction: MyString
+  result: MyString
+  batting_number: 1
+
+two:
+  batter_score_id: 1
+  hitting_direction: MyString
+  result: MyString
+  batting_number: 1

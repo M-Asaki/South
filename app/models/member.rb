@@ -4,4 +4,5 @@ class Member < ApplicationRecord
   validates :uniform_number, presence: true
 
   belongs_to :team, optional: true
+  has_many :batter_scores
 end

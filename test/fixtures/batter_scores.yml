@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  member_id: 1
+  game_id: 1
+  hit_point: 1
+  steal: 1
+  score: 1
+
+two:
+  member_id: 1
+  game_id: 1
+  hit_point: 1
+  steal: 1
+  score: 1
