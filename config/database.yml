@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: south_production
-  username: south
+  database: <%= ENV['south_production'] %>
+  username: <%= ENV['south'] %>
   password: <%= ENV['SOUTH_DATABASE_PASSWORD'] %>
+  host:     <%= ENV['south_host'] %>
+  port:     <%= ENV['3306'] %>

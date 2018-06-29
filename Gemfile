@@ -75,6 +75,3 @@ gem 'bcrypt'
 gem 'carrierwave'
 
 gem 'ruby-opencv'
-
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: :production
